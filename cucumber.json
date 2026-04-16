@@ -1,0 +1,16 @@
+{
+  "default": {
+    "paths": ["features/**/*.feature"],
+    "requireModule": ["ts-node/register/transpile-only"],
+    "require": [
+      "support/env-defaults.ts",
+      "support/world.ts",
+      "support/hooks.ts",
+      "step-definitions/**/*.ts"
+    ],
+    "format": [
+      "progress-bar",
+      "html:cucumber-report/index.html"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "ecole-ua-tests",
+  "version": "1.0.0",
+  "description": "QA test suite for École Ukrainienne de Lyon — Playwright E2E + Jest unit tests",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:bdd": "cucumber-js",
+    "test:bdd:headed": "HEADED=1 cucumber-js"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.43.0",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}
