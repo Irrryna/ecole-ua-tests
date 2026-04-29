@@ -88,7 +88,7 @@ test('teacher dashboard supports homework, announcements, resources and content 
   await expect(page.locator('tr', { hasText: updatedContentTitle })).toHaveCount(0);
 
   await openSidebarItem(page, 'Espace professeur');
-  await page.locator('.action-card', { hasText: 'Mes supports pedagogiques' }).click();
+  await page.locator('.action-card', { hasText: 'Mes supports' }).click();
   // Route uses query params now: /teacher?tab=resources (no component recreation)
   await expect(page).toHaveURL(/\/teacher\?tab=resources/);
   await expectVisibleText(page, 'Mes supports pedagogiques');
@@ -129,5 +129,5 @@ test('legacy /teacher/resources path redirects to /teacher?tab=resources', async
   await loginAs(page, seedData.teacher, '/teacher');
   await page.goto('/teacher/resources');
   await expect(page).toHaveURL(/\/teacher\?tab=resources/);
-  await expectVisibleText(page, 'Mes supports pedagogiques');
+  await expectVisibleText(page, 'Mes supports');
 });
